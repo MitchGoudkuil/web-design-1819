@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #fff; }
+
+p {
+  margin-bottom: 0.4em; }
+
+body {
+  margin: 1rem;
+  font: 13px Helvetica, Arial;
+  background-color: #111;
+  background-size: 350px; }
+
+button {
+  background-color: #8df0bc;
+  border: none;
+  color: white;
+  padding: 1rem 0.7rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 0; }
+
+.hosts {
+  width: 100%;
+  background-color: #f2f2f2;
+  background-image: url(/img/background.png);
+  background-size: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .hosts__center {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem; }
+  .hosts__item {
+    margin: 0.5rem; }
+
+.podcast-text {
+  background-color: #fff;
+  padding: 1rem;
+  height: 200px;
+  overflow: scroll;
+  scroll-behavior: smooth; }
+  .podcast-text p {
+    background-color: #efefef;
+    padding: 0.4em 1em; }
+    .podcast-text p:nth-child(odd) {
+      background-color: #919191; }
+
+.host {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 100px;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2); }
+
+.angry {
+  border: 7px solid red; }
+
+.happy {
+  border: 7px solid yellow; }
+
+.question {
+  border: 7px solid purple; }
+
+.question {
+  border: 7px solid purple; }
+
+.talking {
+  animation: talk 0.8s infinite; }
+
+@keyframes talk {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%,
+  80% {
+    transform: translate3d(1px, 0, 0); }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-1px, 0, 0); }
+  40%,
+  60% {
+    transform: translate3d(1px, 0, 0); } }
+
+@keyframes type {
+  from {
+    width: 0; } }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; }
+  50% {
+    border-color: orange; } }
