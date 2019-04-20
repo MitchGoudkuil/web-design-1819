@@ -3,32 +3,60 @@
   padding: 0;
   box-sizing: border-box; }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: #fff; }
+h1 {
+  font-family: Helvetica;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px; }
+
+h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px; }
 
 p {
-  margin-bottom: 0.4em; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px; }
+
+p {
+  margin-bottom: 0.4em;
+  font-size: 16px;
+  border-radius: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 body {
   margin: 1rem;
-  font: 13px Helvetica, Arial;
   background-color: #111;
-  background-size: 350px; }
+  background-size: 350px;
+  font: 13px, Helvetica, Arial;
+  display: flex;
+  justify-content: center; }
 
 button {
   background-color: #8df0bc;
   border: none;
-  color: white;
-  padding: 1rem 0.7rem;
+  color: #000;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin-right: 0; }
+  button:active {
+    background-color: #78ba94; }
+  button:hover {
+    background-color: #8ecea8; }
+
+.active {
+  background-color: #78ba94; }
 
 .hosts {
   width: 100%;
@@ -41,45 +69,94 @@ button {
   .hosts__center {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem; }
   .hosts__item {
-    margin: 0.5rem; }
+    position: relative;
+    margin: 1rem;
+    text-align: center;
+    z-index: 1; }
 
 .podcast-text {
   background-color: #fff;
   padding: 1rem;
-  height: 200px;
+  min-height: 200px;
+  max-height: 300px;
+  height: 100%;
   overflow: scroll;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  -webkit-box-shadow: 0px -7px 5px -4px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0px -7px 5px -4px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px -7px 5px -4px rgba(0, 0, 0, 0.07); }
   .podcast-text p {
     background-color: #efefef;
     padding: 0.4em 1em; }
     .podcast-text p:nth-child(odd) {
       background-color: #919191; }
+    .podcast-text p:last-of-type {
+      background-color: lightgreen; }
+
+.pause {
+  padding: 1rem 1.3rem; }
+  .pause img {
+    width: 10px; }
+
+.play {
+  padding: 1rem 1.2rem; }
+  .play img {
+    width: 15px; }
+
+.timer-block {
+  width: 100%;
+  background-color: green; }
 
 .host {
-  max-width: 200px;
+  max-width: 150px;
   width: 100%;
   border-radius: 100px;
+  z-index: 1; }
+
+.circle {
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
   -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2); }
-
-.angry {
-  border: 7px solid red; }
-
-.happy {
-  border: 7px solid yellow; }
-
-.question {
-  border: 7px solid purple; }
-
-.question {
-  border: 7px solid purple; }
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transform: scale(0.97);
+  transition: 0.3s;
+  background-color: #fff; }
+  .circle img {
+    width: 30px;
+    position: absolute;
+    z-index: -1; }
 
 .talking {
-  animation: talk 0.8s infinite; }
+  animation: talk 0.8s; }
+
+.active-talking {
+  transform: scale(1.1); }
+
+.middle-block {
+  max-width: 600px;
+  width: 100%;
+  display: block; }
+
+.happy {
+  background-color: yellow; }
+
+.mad {
+  background-color: red; }
+
+.sad {
+  background-color: grey; }
+
+.question {
+  background-color: lightblue; }
 
 @keyframes talk {
   10%,
